@@ -14,29 +14,30 @@
             <fieldset>
                 <legend class="legenda">Dados Pessoais</legend>
                 <label> <br>
-                    <strong class="legenda-campo">Primeiro Nome:</strong> <br>
+                    <strong class="legenda-campo">Primeiro Nome</strong> <br>
                     <input class="input" type="text" name="name" required minlength="2"/>
                 </label>
     
                 <label><br>
-                    <strong class="legenda-campo">Sobrenome:</strong> <br>
+                    <strong class="legenda-campo">Sobrenome</strong> <br>
                     <input class="input" type="text" name="lastname" required minlength="2"/>
                 </label>
     
                 <label><br>
-                    <strong class="legenda-campo">Email:</strong> <br>
+                    <strong class="legenda-campo">Email</strong> <br>
                     <input class="input" type="text" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="texto@domínio.algumacoisa"/>
                 </label>
                 <!-- Esse pattern é só procurar na internet e serve para estabelecermos um padrão de como querermos o email, neste caso-->
                 <label><br>
-                    <strong class="legenda-campo">Idade:</strong> <br>
+                    <strong class="legenda-campo">Data de Nascimento</strong> <br>
+                    <input class="input" type="date" name="birthday" required min="1950-01-01"/>
+                </label>
+
+                <label><br>
+                    <strong class="legenda-campo">Idade</strong> <br>
                     <input class="input-idade" type="number" name="age" required min="18" max="100"/>
                 </label>
     
-                <label><br>
-                    <strong class="legenda-campo">Data de Nascimento:</strong> <br>
-                    <input class="input" type="date" name="birthday" required min="1950-01-01"/>
-                </label>
     
                 <label> <br>
                     <strong class="legenda-campo">Currículo:</strong> <br>
@@ -56,16 +57,27 @@
                     <strong class="legenda-campo">Cargo na empresa</strong> <br>
                     <input class="input" type="text" name="companyjobtitle" required/>
                 </label> <br>
+
                 <label> 
                     <strong class="legenda-campo">Você indicaria essa empresa?</strong> 
                     Sim <input class="checkbox" type="radio" name="indication" required > 
                     Não <input class="checkbox" type="radio" name="indication" required > <br>
-                </label>
-                <input class="botao" type="submit" name="cadastro" value="Cadastrar">
-            </fieldset> 
-    
+                </label> <br>
+                    <span class="legenda-campo">Como você se considera: 
+                        <select name="ordenacao" id="cargo">
+                            <option value="Jr">Júnior</option>
+                            <option value="Pleno">Pleno</option>
+                            <option value="Sr">Sênior</option>
+                            <option value="Especialista">Especialista</option>
+                        </select> <br> <br>
+                    </span>
+                    <label>
+                    <strong class="legenda-campo">Descreva seu trabalho na empresa</strong><br>
+                    <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                    </label>
+            </fieldset>
 
-    
+            <input class="botao" type="submit" name="cadastro" value="Cadastrar">
         </form>
 
 
